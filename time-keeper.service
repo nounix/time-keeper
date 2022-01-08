@@ -1,0 +1,11 @@
+[Unit]
+Description=Time keeper
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/time-keeper/env/bin/python /home/pi/time-keeper/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
